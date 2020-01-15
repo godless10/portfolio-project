@@ -18,6 +18,18 @@ class Blog (models.Model):
     body = models.TextField(max_length=700)
     image = models.ImageField(upload_to='images/')
 
+    def __str__(self):
+        retstr = str(self.pk) + ". " + self.title + " - " +self.pub_date.strftime('%b %e %Y')
+        return retstr
+
+    def summary_body(self):
+        return self.body[0:100]
+
+    def pub_date_pretty(self):
+        return self.pub_date.strftime('%b %e %Y')
+    
+    def returnId(self):
+        return self.pk
 
 
 
