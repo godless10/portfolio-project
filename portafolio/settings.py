@@ -129,7 +129,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATICFILES_DIRS = [
-    'C:/Users/wadr1/Desktop/python-projects/portafolio-project/portafolio/static',
+    os.path.join(BASE_DIR, 'portafolio/static'),
+    #'C:/Users/wadr1/Desktop/python-projects/portafolio-project/portafolio/static',
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
