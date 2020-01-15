@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+# to show the model Job in the admin page
+from .models import Job
+
+admin.site.register(Job)
